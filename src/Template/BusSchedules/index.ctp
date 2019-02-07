@@ -9,6 +9,7 @@
         </tr>
     </thead>
     <tbody>
+        <!-- Horários Existentes -->
         <?php foreach ($busSchedules as $schedule): ?>
         <?= $this->Form->create($schedule) ?>
         <tr>
@@ -19,5 +20,16 @@
         </tr>
         <?= $this->Form->end() ?>
         <?php endforeach; ?>
+
+        <!-- Novo horário inserido pelo usuários -->
+        <?= $this->Form->create($newSchedule) ?>
+        <tr>
+            <td><?= $this->Form->control('line', ['label' => '']) ?></td>
+            <td><?= $this->Form->control('day', ['label' => '']) ?></td>
+            <td><?= $this->Form->control('departure_time', ['label' => '']) ?></td>
+            <td><?= $this->Form->control('departure_place', ['label' => '']) ?></td>
+            <td><?= $this->Form->submit('Novo Horário') ?></td>
+        </tr>
+        <?= $this->Form->end() ?>
     </tbody>
 </table>
