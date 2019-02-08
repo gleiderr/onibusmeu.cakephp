@@ -22,7 +22,7 @@
         <?php endforeach; ?>
 
         <!-- Novo horário inserido pelos usuários -->
-        <?= $this->Form->create($newSchedule, ['action' => 'add']) ?>
+        <?= $this->Form->create($newSchedule, ['url' => 'bus-schedules/add']) ?>
         <tr>
             <td><?= $this->Form->control('line', ['label' => '']) ?></td>
             <td><?= $this->Form->control('day', ['label' => '']) ?></td>
