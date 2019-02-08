@@ -21,8 +21,8 @@
         <?= $this->Form->end() ?>
         <?php endforeach; ?>
 
-        <!-- Novo horário inserido pelo usuários -->
-        <?= $this->Form->create($newSchedule) ?>
+        <!-- Novo horário inserido pelos usuários -->
+        <?= $this->Form->create($newSchedule, ['action' => 'add']) ?>
         <tr>
             <td><?= $this->Form->control('line', ['label' => '']) ?></td>
             <td><?= $this->Form->control('day', ['label' => '']) ?></td>
